@@ -107,8 +107,7 @@ When the simulation runs, the PID controller elegantly drives the Turtlebot to t
 
 ### Control Performance Data
 To verify the quality of the controller, the python script logs the telemetry and plots it using `matplotlib`. 
-
-![PID Control Plots](path/to/your/plot_image.png)
+<img width="1186" height="716" alt="image" src="https://github.com/user-attachments/assets/d01955c2-0b9a-4c5f-b189-beec01f472b5" />
 *(Placeholder: Upload the matplotlib output showing the X-Y trajectory, the diminishing step-response errors over time, and the control actuator effort).*
 
 ---
