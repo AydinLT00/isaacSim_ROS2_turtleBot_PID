@@ -89,7 +89,7 @@ Instead of teleoperating the robot with a keyboard, I wrote a custom ROS 2 Pytho
 
 To run the controller:
 ```bash
-python3 pid_controller.py
+python3 full_pid_ctrl.py
 ```
 
 ---
