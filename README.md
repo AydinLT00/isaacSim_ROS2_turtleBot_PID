@@ -73,9 +73,6 @@ We need a way for ROS 2 to send velocity commands (`/cmd_vel`) to the physics en
    * `wheelRadius`: 0.025 m
    * 
 <img width="1825" height="790" alt="cmd_vel" src="https://github.com/user-attachments/assets/2b3dfeaf-a136-43c3-8762-a9f1b567b15d" />
-<img width="753" height="413" alt="Screenshot 2026-04-02 173002" src="https://github.com/user-attachments/assets/ee54c2c8-7aca-4594-ab6b-91f26c45893d" />
-
-*(See `/images/cmdvel_graph.png` and `/images/diff_drive_params.png` in this repo for exact node wiring).*
 
 ---
 
