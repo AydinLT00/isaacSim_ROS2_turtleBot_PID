@@ -99,13 +99,11 @@ python3 full_pid_ctrl.py
 When the simulation runs, the PID controller elegantly drives the Turtlebot to the target coordinate, slowing down smoothly as the proportional error decreases, and settling exactly on the target with zero steady-state error.
 
 ### Simulation Demo
-![Isaac Sim Turtlebot PID Demo](path/to/your/simulation_gif.gif)
-*(Placeholder: Upload your GIF here showing the robot driving in Isaac Sim)*
+![Isaac Sim Turtlebot PID Demo](turtle_pid_1.gif)
 
 ### Control Performance Data
 To verify the quality of the controller, the python script logs the telemetry and plots it using `matplotlib`. 
 <img width="1186" height="716" alt="image" src="https://github.com/user-attachments/assets/d01955c2-0b9a-4c5f-b189-beec01f472b5" />
-*(Placeholder: Upload the matplotlib output showing the X-Y trajectory, the diminishing step-response errors over time, and the control actuator effort).*
 
 ---
 *End of log.*
