@@ -37,7 +37,7 @@ The goal of this project is to bypass standard "toy" examples and build a solid 
 2. Load the raw robot asset: Drag and drop the `turtlebot.usd` into the stage.
    * *Note:* At this stage, this `.usd` file is strictly a 3D visual and physical model. It has no Action Graphs (no software hooks for ROS 2 to talk to). We have to build them manually.
 
-### Step 3: Configuring Odometry (The "Sensors")
+### Step 3: Configuring Odometry
 We need the robot to broadcast its $(X, Y, \theta)$ position to ROS 2.
 1. Go to the top menu: `Tools -> Robotics -> ROS2 Omnigraph -> Odometry publisher`.
 2. In the properties of this new graph, set the **Chassis Frame ID** to `base_footprint`.
@@ -54,7 +54,7 @@ We need the robot to broadcast its $(X, Y, \theta)$ position to ROS 2.
    * Change the **Fixed Frame** to `odom`.
    * Add an Odometry display and subscribe to `/odom`. You should see the red arrow dynamically appearing, tracking the robot's state.
 
-### Step 4: Configuring Differential Drive (The "Motors")
+### Step 4: Configuring Differential Drive
 We need a way for ROS 2 to send velocity commands (`/cmd_vel`) to the physics engine to spin the wheels. I built an Action Graph based on the [official NVIDIA ROS 2 Drive TurtleBot Tutorial](https://docs.isaacsim.omniverse.nvidia.com/5.1.0/ros2_tutorials/tutorial_ros2_drive_turtlebot.html).
 
 1. Create a new Action Graph (e.g., `cmdVel`).
@@ -71,12 +71,15 @@ We need a way for ROS 2 to send velocity commands (`/cmd_vel`) to the physics en
    * `maxLinearSpeed`: 0.22 m/s
    * `wheelDistance`: 0.16 m
    * `wheelRadius`: 0.025 m
+   * 
+<img width="1825" height="790" alt="cmd_vel" src="https://github.com/user-attachments/assets/2b3dfeaf-a136-43c3-8762-a9f1b567b15d" />
+<img width="753" height="413" alt="Screenshot 2026-04-02 173002" src="https://github.com/user-attachments/assets/ee54c2c8-7aca-4594-ab6b-91f26c45893d" />
 
 *(See `/images/cmdvel_graph.png` and `/images/diff_drive_params.png` in this repo for exact node wiring).*
 
 ---
 
-## 🧠 Step 5: The PID Controller (The "Brain")
+## 🧠 Step 5: The PID Controller
 
 Instead of teleoperating the robot with a keyboard, I wrote a custom ROS 2 Python Node to act as a **Full PID Controller**. 
 
